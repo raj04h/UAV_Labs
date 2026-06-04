@@ -81,11 +81,9 @@ master.mav.command_long_send(
 while True:
 
     send_acceleration(
-        0.5,
         0.0,
+        10000.0,
         0.0
     )
 
     time.sleep(0.1)
-
-

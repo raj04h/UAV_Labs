@@ -63,12 +63,7 @@ master.mav.command_long_send(
     mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
     0,
     1,      # ARM
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    0,0, 0,0,0,0
 )
 
 arm_ack = master.recv_match(
@@ -117,8 +112,8 @@ while True:
 
     send_setpoint(
         5.0,
-        0.0,
-        -3.0
+        2.0,
+        1.0
     )
 
     counter += 1

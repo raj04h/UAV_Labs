@@ -35,9 +35,10 @@ def send_velocity(vx, vy, vz):
         0, 0, 0,
 
         vx,vy,vz,
+
         0, 0, 0,
-        0,
-        0
+        
+        0,0
     )
 
 
@@ -73,18 +74,18 @@ master.mav.command_long_send(
     0,
     1,
     6, #offboard mode
+    0, #pram1
+    0, #pram2
     0,
-    0,
-    0,
-    0,
+    0,# pram n
     0
 )
 
 while True:
 
     send_velocity(
-        1.0,
         0.0,
+        100.0,
         0.0
     )
 
